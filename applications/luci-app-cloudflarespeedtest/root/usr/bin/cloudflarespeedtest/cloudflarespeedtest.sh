@@ -51,7 +51,7 @@ function speed_test(){
     fi
     
     if [ $advanced -eq "1" ] ; then
-        command="${command} -tl ${tl} -tll ${tll} -n ${threads} -t ${t} -dt ${dt} -dn ${dn}"
+        command="${command} -tl ${tl} -tll ${tll} -n ${threads} -t ${t} -dt ${dt} -dn ${dn} -tlr 0"
         if [ $dd -eq "1" ] ; then
             command="${command} -dd"
         fi
@@ -59,7 +59,7 @@ function speed_test(){
             command="${command} -tp ${tp}"
         fi
     else
-        command="${command} -tl 200 -tll 40 -n 200 -t 4 -dt 10 -dn 1"
+        command="${command} -tl 200 -tll 40 -n 200 -t 4 -dt 10 -dn 1 -tlr 0"
     fi
     
     appinit
